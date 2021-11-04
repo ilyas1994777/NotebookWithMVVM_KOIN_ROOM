@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+    <data>
+        
+        <variable
+            name="ViewModel"
+            type="com.example.notebook.view.view_main_windom.ViewModelMainWindom" />
+        
+    </data>
+
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.view_main_windom.ViewMainWindom">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
+    <ImageView
+        android:id="@+id/buttonCreateNotes"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:src="@drawable/button_create"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginBottom="100dp"
+        android:layout_marginRight="20dp"
+        android:onClick="@{() -> ViewModel.clickCreateNotebook()}"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+"
+        app:layout_constraintTop_toTopOf="@id/buttonCreateNotes"
+        app:layout_constraintBottom_toBottomOf="@id/buttonCreateNotes"
+        app:layout_constraintLeft_toLeftOf="@id/buttonCreateNotes"
+        app:layout_constraintRight_toRightOf="@id/buttonCreateNotes"
+        android:textSize="45sp"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
